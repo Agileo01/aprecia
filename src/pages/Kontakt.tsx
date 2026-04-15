@@ -60,7 +60,11 @@ const Kontakt = () => {
                       <h2 className="font-heading text-2xl font-semibold mb-4">Slovenská republika</h2>
                       <div className="flex gap-3 text-muted-foreground mb-3">
                         <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Aprecia s. r. o.<br />Na Hrebienku 8079/2A<br />811 02 Bratislava - mestská časť Staré Mesto</span>
+                        <div className="flex flex-col">
+                          <span>Aprecia s. r. o.</span>
+                          <span>Na Hrebienku 8079/2A</span>
+                          <span>811 02 Bratislava - mestská časť Staré Mesto</span>
+                        </div>
                       </div>
                       <a
                         href="https://maps.google.com/?q=Na+Hrebienku+8079/2A,+811+02+Bratislava"
@@ -90,7 +94,11 @@ const Kontakt = () => {
                       <h2 className="font-heading text-2xl font-semibold mb-4">Česká republika</h2>
                       <div className="flex gap-3 text-muted-foreground mb-3">
                         <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Aprecia s.r.o.<br />Štěpánská 1742/27<br />110 00 Praha 1 - Nové Město</span>
+                        <div className="flex flex-col">
+                          <span>Aprecia s.r.o.</span>
+                          <span>Štěpánská 1742/27</span>
+                          <span>110 00 Praha 1 - Nové Město</span>
+                        </div>
                       </div>
                       <a
                         href="https://maps.google.com/?q=Štěpánská+1742/27,+110+00+Praha+1"
