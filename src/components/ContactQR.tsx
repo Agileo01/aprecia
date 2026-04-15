@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 
 const VCARD = `BEGIN:VCARD
 VERSION:3.0
-N:;;;;
+N:Hudzík;Anton;;;
 FN:Aprecia s.r.o.
 ORG:Aprecia s.r.o.
 TEL;TYPE=WORK,VOICE:+421903991150
