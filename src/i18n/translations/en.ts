@@ -199,10 +199,41 @@ export const en: Translations = {
     emailClientOpenedDesc: 'Send the message from your email client.',
   },
   legal: {
-    ochranaTitle: 'Privacy Policy',
-    cookiesTitle: 'Cookies',
-    podmienkyTitle: 'Terms',
-    placeholder: 'The content of this page will be added.',
+    ochrana: {
+      title: 'Privacy Policy',
+      sections: [
+        { heading: '1. Data Controller', content: 'The data controller is Aprecia s. r. o., with registered office at Na Hrebienku 8079/2A, 811 02 Bratislava, Slovak Republic, Company ID: 46 529 187 (hereinafter the "Controller").\n\nFor any questions regarding data protection, please contact us at: aprecia@aprecia.sk.' },
+        { heading: '2. What Personal Data We Process', content: 'We process personal data that you provide to us in connection with the use of our services or communication with us:\n\n• Identification data: first name, surname, title\n• Contact data: email address, phone number, correspondence address\n• Communication data: content of emails, messages from the contact form\n• Billing data: company name, Company ID, Tax ID, VAT ID, registered office' },
+        { heading: '3. Purposes and Legal Bases of Processing', content: 'We process personal data for the following purposes:\n\n• Provision of advisory and expert services – legal basis: performance of a contract (Art. 6(1)(b) GDPR)\n• Communication with clients and prospects – legal basis: legitimate interest (Art. 6(1)(f) GDPR)\n• Fulfilment of legal obligations (accounting, taxes) – legal basis: legal obligation (Art. 6(1)(c) GDPR)\n• Sending commercial communications – legal basis: consent (Art. 6(1)(a) GDPR)' },
+        { heading: '4. Data Retention Period', content: '• Contract-related data: for the duration of the contractual relationship and 5 years after its termination\n• Accounting and tax documents: 10 years from the end of the accounting period\n• Data processed on the basis of consent: until consent is withdrawn\n• Contact form data: 1 year from the last communication' },
+        { heading: '5. Recipients of Personal Data', content: 'Personal data may be shared with:\n\n• IT service and hosting providers\n• Accounting and tax offices\n• Public authorities to the extent required by law\n\nWe do not transfer personal data to third countries outside the European Economic Area.' },
+        { heading: '6. Your Rights', content: 'As a data subject, you have the following rights:\n\n• Right of access to your personal data\n• Right to rectification of inaccurate data\n• Right to erasure ("right to be forgotten")\n• Right to restriction of processing\n• Right to data portability\n• Right to object to processing\n• Right to withdraw consent\n• Right to lodge a complaint with a supervisory authority\n\nYou may exercise your rights by sending a request to: aprecia@aprecia.sk.' },
+        { heading: '7. Data Security', content: 'We have implemented appropriate technical and organizational measures to protect personal data against unauthorized access, alteration, disclosure or destruction.' },
+      ],
+    },
+    cookies: {
+      title: 'Cookie Policy',
+      sections: [
+        { heading: '1. What Are Cookies', content: 'Cookies are small text files that are stored on your device when you visit a website. They are used to ensure the proper functioning of the website, improve user experience and analyse traffic.' },
+        { heading: '2. What Cookies We Use', content: '• Necessary (technical) cookies – ensure basic website functions such as navigation and access to secure areas. These cookies do not require consent.\n\n• Analytical cookies – help us understand how visitors use our website through anonymous collection and evaluation of information.' },
+        { heading: '3. Managing Cookies', content: 'You can manage cookies in your web browser settings:\n\n• Google Chrome: Settings → Privacy and Security → Cookies\n• Mozilla Firefox: Settings → Privacy & Security\n• Safari: Preferences → Privacy\n• Microsoft Edge: Settings → Cookies and site permissions\n\nPlease note that disabling certain cookies may affect the functionality of the website.' },
+        { heading: '4. Cookie Retention Period', content: '• Session cookies – automatically deleted when you close your browser\n• Persistent cookies – stored for a specified period (typically 1–12 months) or until manually deleted' },
+        { heading: '5. Contact', content: 'For any questions regarding the use of cookies, please contact us at: aprecia@aprecia.sk.' },
+      ],
+    },
+    podmienky: {
+      title: 'Terms of Use',
+      sections: [
+        { heading: '1. General Provisions', content: 'These Terms of Use govern the rules of access to and use of the website www.aprecia.sk, operated by Aprecia s. r. o., Company ID: 46 529 187 (hereinafter the "Operator").\n\nBy accessing and using the website, you agree to these Terms.' },
+        { heading: '2. Website Content', content: 'The content of the website is for informational purposes only and does not constitute legal, financial, tax or other professional advice. The information provided cannot replace individual professional consultation.\n\nThe Operator makes reasonable efforts to ensure the accuracy and timeliness of published information but does not guarantee its completeness, accuracy or currency.' },
+        { heading: '3. Intellectual Property', content: 'All website content (including texts, graphics, logos, images, design and software) is protected by copyright and other intellectual property rights. Any copying, distribution, reproduction or other use of the content without the prior written consent of the Operator is prohibited.' },
+        { heading: '4. Limitation of Liability', content: 'The Operator shall not be liable for:\n\n• Damages arising in connection with the use or inability to use the website\n• Damages arising from reliance on information published on the website\n• Content of third-party websites linked from the website\n• Temporary unavailability of the website for technical or other reasons' },
+        { heading: '5. Third-Party Links', content: 'The website may contain links to third-party websites. The Operator has no control over the content of these websites and bears no responsibility for them. Use of third-party links is at the user\'s own risk.' },
+        { heading: '6. Changes to Terms', content: 'The Operator reserves the right to change or update these Terms at any time. The current version is always available on the website.' },
+        { heading: '7. Governing Law', content: 'These Terms shall be governed by the laws of the Slovak Republic.' },
+        { heading: '8. Contact', content: 'Aprecia s. r. o.\nNa Hrebienku 8079/2A\n811 02 Bratislava\nEmail: aprecia@aprecia.sk\nPhone: +421 903 991 150' },
+      ],
+    },
   },
   footer: {
     description: 'Independent advisory firm focused on financial advisory, transaction processes and valuation.',
