@@ -35,7 +35,7 @@ const Index = () => (
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-3xl">
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight">
-            Finančné poradenstvo pre strategické rozhodnutia
+            Hodnota, ktorej môžete dôverovať
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
             Pomáhame vlastníkom podnikov, investorom a právnym zástupcom prijímať rozhodnutia, ovplyvňujúce súčasnú alebo budúcu hodnotu ich majetku.
