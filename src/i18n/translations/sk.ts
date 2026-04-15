@@ -199,10 +199,41 @@ export const sk: Translations = {
     emailClientOpenedDesc: 'Odošlite správu z vášho emailového klienta.',
   },
   legal: {
-    ochranaTitle: 'Ochrana osobných údajov',
-    cookiesTitle: 'Cookies',
-    podmienkyTitle: 'Podmienky',
-    placeholder: 'Obsah tejto stránky bude doplnený.',
+    ochrana: {
+      title: 'Ochrana osobných údajov',
+      sections: [
+        { heading: '1. Prevádzkovateľ', content: 'Prevádzkovateľom osobných údajov je spoločnosť Aprecia s. r. o., so sídlom Na Hrebienku 8079/2A, 811 02 Bratislava – mestská časť Staré Mesto, IČO: 46 529 187, zapísaná v Obchodnom registri Mestského súdu Bratislava III, oddiel: Sro, vložka č. 78935/B (ďalej len „Prevádzkovateľ").\n\nV prípade otázok týkajúcich sa ochrany osobných údajov nás kontaktujte na e-mailovej adrese: aprecia@aprecia.sk.' },
+        { heading: '2. Aké osobné údaje spracúvame', content: 'Spracúvame osobné údaje, ktoré nám poskytnete v súvislosti s využívaním našich služieb alebo komunikáciou s nami:\n\n• Identifikačné údaje: meno, priezvisko, titul\n• Kontaktné údaje: e-mailová adresa, telefónne číslo, korešpondenčná adresa\n• Údaje z komunikácie: obsah e-mailov, správ z kontaktného formulára\n• Fakturačné údaje: obchodné meno, IČO, DIČ, IČ DPH, sídlo' },
+        { heading: '3. Účely a právne základy spracúvania', content: 'Osobné údaje spracúvame na nasledovné účely:\n\n• Poskytovanie poradenských a znaleckých služieb – právny základ: plnenie zmluvy (čl. 6 ods. 1 písm. b) GDPR)\n• Komunikácia s klientmi a záujemcami – právny základ: oprávnený záujem (čl. 6 ods. 1 písm. f) GDPR)\n• Plnenie zákonných povinností (účtovníctvo, dane, archivačné povinnosti) – právny základ: zákonná povinnosť (čl. 6 ods. 1 písm. c) GDPR)\n• Zasielanie obchodných oznámení – právny základ: súhlas dotknutej osoby (čl. 6 ods. 1 písm. a) GDPR)' },
+        { heading: '4. Doba uchovávania údajov', content: 'Osobné údaje uchovávame len po dobu nevyhnutnú na splnenie účelu spracúvania:\n\n• Údaje súvisiace s plnením zmluvy: po dobu trvania zmluvného vzťahu a 5 rokov po jeho ukončení\n• Účtovné a daňové doklady: 10 rokov od konca účtovného obdobia\n• Údaje spracúvané na základe súhlasu: do odvolania súhlasu\n• Údaje z kontaktného formulára: 1 rok od poslednej komunikácie' },
+        { heading: '5. Príjemcovia osobných údajov', content: 'Osobné údaje môžu byť poskytnuté nasledovným kategóriám príjemcov:\n\n• Poskytovatelia IT služieb a hostingu\n• Účtovné a daňové kancelárie\n• Orgány verejnej moci v rozsahu ustanovenom zákonom\n\nOsobné údaje neprenášame do tretích krajín mimo Európskeho hospodárskeho priestoru.' },
+        { heading: '6. Vaše práva', content: 'Ako dotknutá osoba máte nasledovné práva:\n\n• Právo na prístup k osobným údajom\n• Právo na opravu nesprávnych údajov\n• Právo na vymazanie údajov („právo byť zabudnutý")\n• Právo na obmedzenie spracúvania\n• Právo na prenosnosť údajov\n• Právo namietať proti spracúvaniu\n• Právo odvolať súhlas so spracúvaním\n• Právo podať sťažnosť na Úrad na ochranu osobných údajov SR\n\nSvoje práva môžete uplatniť zaslaním žiadosti na e-mailovú adresu: aprecia@aprecia.sk.' },
+        { heading: '7. Zabezpečenie údajov', content: 'Prijali sme primerané technické a organizačné opatrenia na ochranu osobných údajov pred neoprávneným prístupom, zmenou, zverejnením alebo zničením. Prístup k osobným údajom majú len oprávnené osoby, ktoré sú viazané povinnosťou mlčanlivosti.' },
+      ],
+    },
+    cookies: {
+      title: 'Cookies',
+      sections: [
+        { heading: '1. Čo sú cookies', content: 'Cookies sú malé textové súbory, ktoré sa ukladajú vo vašom zariadení (počítač, tablet, smartfón) pri návšteve webovej stránky. Slúžia na zabezpečenie správneho fungovania stránky, zlepšenie používateľského zážitku a analýzu návštevnosti.' },
+        { heading: '2. Aké cookies používame', content: 'Na našej webovej stránke používame nasledovné typy cookies:\n\n• Nevyhnutné (technické) cookies – zabezpečujú základné funkcie stránky, ako je navigácia a prístup k zabezpečeným oblastiam. Bez týchto cookies stránka nemôže správne fungovať. Nevyžadujú súhlas.\n\n• Analytické cookies – pomáhajú nám pochopiť, ako návštevníci používajú našu stránku, prostredníctvom anonymného zberu a vyhodnocovania informácií. Tieto cookies používame na zlepšenie našej stránky.' },
+        { heading: '3. Správa cookies', content: 'Svoj súhlas s používaním cookies môžete kedykoľvek zmeniť alebo odvolať. Cookies môžete spravovať v nastaveniach vášho webového prehliadača:\n\n• Google Chrome: Nastavenia → Súkromie a zabezpečenie → Cookies\n• Mozilla Firefox: Nastavenia → Súkromie a bezpečnosť\n• Safari: Predvoľby → Súkromie\n• Microsoft Edge: Nastavenia → Cookies a povolenia stránok\n\nUpozorňujeme, že zakázanie niektorých cookies môže ovplyvniť funkčnosť webovej stránky.' },
+        { heading: '4. Doba uchovávania cookies', content: '• Relačné cookies – automaticky sa vymažú po zatvorení prehliadača\n• Trvalé cookies – uchovávajú sa po určitú dobu (zvyčajne 1–12 mesiacov) alebo do ich manuálneho vymazania' },
+        { heading: '5. Kontakt', content: 'V prípade otázok týkajúcich sa používania cookies nás kontaktujte na e-mailovej adrese: aprecia@aprecia.sk.' },
+      ],
+    },
+    podmienky: {
+      title: 'Podmienky používania',
+      sections: [
+        { heading: '1. Úvodné ustanovenia', content: 'Tieto podmienky používania (ďalej len „Podmienky") upravujú pravidlá prístupu a používania webovej stránky www.aprecia.sk (ďalej len „Webová stránka"), ktorej prevádzkovateľom je spoločnosť Aprecia s. r. o., so sídlom Na Hrebienku 8079/2A, 811 02 Bratislava – mestská časť Staré Mesto, IČO: 46 529 187 (ďalej len „Prevádzkovateľ").\n\nPrístupom na Webovú stránku a jej používaním vyjadrujete súhlas s týmito Podmienkami.' },
+        { heading: '2. Obsah webovej stránky', content: 'Obsah Webovej stránky má informatívny charakter a nepredstavuje právne, finančné, daňové ani iné odborné poradenstvo. Informácie uvedené na Webovej stránke nemôžu nahradiť individuálnu odbornú konzultáciu.\n\nPrevádzkovateľ vynakladá primerané úsilie na zabezpečenie správnosti a aktuálnosti zverejnených informácií, avšak nezaručuje ich úplnosť, presnosť ani aktuálnosť.' },
+        { heading: '3. Duševné vlastníctvo', content: 'Všetok obsah Webovej stránky (vrátane textov, grafiky, log, obrázkov, dizajnu a softvéru) je chránený autorským právom a ďalšími právami duševného vlastníctva. Akékoľvek kopírovanie, distribúcia, reprodukcia alebo iné použitie obsahu bez predchádzajúceho písomného súhlasu Prevádzkovateľa je zakázané.' },
+        { heading: '4. Obmedzenie zodpovednosti', content: 'Prevádzkovateľ nenesie zodpovednosť za:\n\n• Škody vzniknuté v súvislosti s používaním alebo nemožnosťou používania Webovej stránky\n• Škody vzniknuté v dôsledku spoliehania sa na informácie zverejnené na Webovej stránke\n• Obsah webových stránok tretích strán, na ktoré Webová stránka odkazuje\n• Dočasnú nedostupnosť Webovej stránky z technických alebo iných dôvodov' },
+        { heading: '5. Odkazy na tretie strany', content: 'Webová stránka môže obsahovať odkazy na webové stránky tretích strán. Prevádzkovateľ nemá kontrolu nad obsahom týchto stránok a nenesie za ne žiadnu zodpovednosť. Použitie odkazov na stránky tretích strán je na vlastné riziko používateľa.' },
+        { heading: '6. Zmeny podmienok', content: 'Prevádzkovateľ si vyhradzuje právo kedykoľvek zmeniť alebo aktualizovať tieto Podmienky. Aktuálna verzia Podmienok je vždy dostupná na Webovej stránke. Pokračovaním v používaní Webovej stránky po zverejnení zmien vyjadrujete súhlas s upravenými Podmienkami.' },
+        { heading: '7. Rozhodné právo', content: 'Tieto Podmienky sa riadia právnym poriadkom Slovenskej republiky. Akékoľvek spory vyplývajúce z používania Webovej stránky budú riešené príslušnými súdmi Slovenskej republiky.' },
+        { heading: '8. Kontakt', content: 'V prípade otázok týkajúcich sa týchto Podmienok nás kontaktujte:\n\nAprecia s. r. o.\nNa Hrebienku 8079/2A\n811 02 Bratislava\nE-mail: aprecia@aprecia.sk\nTelefón: +421 903 991 150' },
+      ],
+    },
   },
   footer: {
     description: 'Nezávislá poradenská spoločnosť zameraná na finančné poradenstvo, transakčné procesy a oceňovanie.',
