@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import { ArrowRight, Shield, Scale, Globe, Lock } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
+import parallaxCity from "@/assets/parallax-city.jpg";
+import parallaxMarble from "@/assets/parallax-marble.jpg";
+import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
 
 const iconMap = [Shield, Scale, Globe, Globe, Lock];
 
@@ -60,14 +64,18 @@ const Index = () => {
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="py-24 md:py-36 bg-secondary">
-        <div className="max-w-6xl mx-auto px-6">
+      {/* Hero with parallax */}
+      <ParallaxSection
+        imageSrc={parallaxCity}
+        height="min-h-[600px] md:min-h-[700px]"
+        overlay="bg-foreground/70"
+      >
+        <div className="max-w-6xl mx-auto px-6 py-24 md:py-36">
           <div className="max-w-3xl">
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight animate-fade-in">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-foreground leading-tight animate-fade-in">
               {t.index.heroTitle}
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: "150ms" }}>
+            <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: "150ms" }}>
               {t.index.heroSubtitle}
             </p>
             <div className="mt-10 flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "300ms" }}>
@@ -80,14 +88,14 @@ const Index = () => {
               </Link>
               <Link
                 to={route('financnePoradenstvo')}
-                className="inline-flex items-center gap-2 border border-foreground text-foreground px-6 py-3 text-sm font-medium hover:bg-foreground hover:text-background transition-colors"
+                className="inline-flex items-center gap-2 border border-primary-foreground/50 text-primary-foreground px-6 py-3 text-sm font-medium hover:bg-primary-foreground/10 transition-colors"
               >
                 {t.index.ctaServices}
               </Link>
             </div>
           </div>
         </div>
-      </section>
+      </ParallaxSection>
 
       {/* O nás */}
       <section className="page-section">
@@ -105,12 +113,27 @@ const Index = () => {
         </AnimatedSection>
       </section>
 
+      {/* Parallax divider - marble */}
+      <ParallaxSection
+        imageSrc={parallaxMarble}
+        height="min-h-[300px]"
+        overlay="bg-foreground/50"
+      >
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <AnimatedSection>
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-primary-foreground mb-4">
+              {t.index.servicesTitle}
+            </h2>
+            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
+              {t.index.heroSubtitle}
+            </p>
+          </AnimatedSection>
+        </div>
+      </ParallaxSection>
+
       {/* Služby */}
       <section className="bg-secondary py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <AnimatedSection>
-            <h2 className="section-title mb-12">{t.index.servicesTitle}</h2>
-          </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-6">
             {t.index.services.map((s, i) => (
               <StaggerItem key={i} index={i}>
@@ -148,14 +171,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <AnimatedSection>
-        <section className="bg-foreground text-background py-16 md:py-24">
-          <div className="max-w-6xl mx-auto px-6 text-center">
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
+      {/* CTA with parallax */}
+      <ParallaxSection
+        imageSrc={parallaxArchitecture}
+        height="min-h-[400px]"
+        overlay="bg-foreground/75"
+      >
+        <div className="max-w-6xl mx-auto px-6 text-center py-16 md:py-24">
+          <AnimatedSection>
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4 text-primary-foreground">
               {t.index.ctaSectionTitle}
             </h2>
-            <p className="text-background/70 mb-8 text-lg">
+            <p className="text-primary-foreground/70 mb-8 text-lg">
               {t.index.ctaSectionSubtitle}
             </p>
             <Link
@@ -165,9 +192,9 @@ const Index = () => {
               {t.index.ctaContact}
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
-        </section>
-      </AnimatedSection>
+          </AnimatedSection>
+        </div>
+      </ParallaxSection>
     </Layout>
   );
 };
