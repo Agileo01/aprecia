@@ -109,7 +109,7 @@ const Kontakt = () => {
                         Otvoriť v Google Maps →
                       </a>
                     </div>
-                    <div className="md:w-72 flex-shrink-0">
+                    <div className="md:w-56 flex-shrink-0">
                       <iframe
                         title="Mapa - Praha"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.3!2d14.4237!3d50.0785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDA0JzQyLjYiTiAxNMKwMjUnMjUuMyJF!5e0!3m2!1ssk!2ssk!4v1"
