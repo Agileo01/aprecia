@@ -169,7 +169,7 @@ export const en: Translations = {
     ],
   },
   odborneClanky: {
-    title: 'Articles',
+    title: 'Blog',
     subtitle: 'We publish expert articles and analyses from the fields of financial advisory, valuation and transactions. Our goal is to share practical insights and contribute to professional discourse.',
     newsletterTitle: 'Subscribe to our news',
     newsletterSubtitle: 'Sign up and receive new expert articles and updates directly in your inbox.',
@@ -248,7 +248,7 @@ export const en: Translations = {
     znaleckaCinnost: 'Expert Witness',
     tim: 'Team',
     referencie: 'References',
-    odborneClanky: 'Articles',
+    odborneClanky: 'Blog',
     kontakt: 'Contact',
     ochrana: 'Privacy Policy',
     cookies: 'Cookies',
