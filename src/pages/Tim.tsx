@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
+import parallaxMarble from "@/assets/parallax-marble.jpg";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
@@ -30,7 +31,7 @@ const Tim = () => {
 
   return (
     <Layout>
-      <PageHero title={t.tim.title} subtitle={t.tim.subtitle} />
+      <PageHero title={t.tim.title} subtitle={t.tim.subtitle} backgroundImage={parallaxMarble} />
       <section className="page-section">
         <div className="space-y-16">
           {t.tim.team.map((member, i) => (

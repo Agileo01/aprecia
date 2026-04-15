@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
+import parallaxMarble from "@/assets/parallax-marble.jpg";
 
 const AnimatedSection = ({ children }: { children: React.ReactNode }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
@@ -17,7 +18,7 @@ const OceňovanieDusevnehoVlastnictva = () => {
 
   return (
     <Layout>
-      <PageHero title={t.ocenovanieDusevnehoVlastnictva.title} subtitle={t.ocenovanieDusevnehoVlastnictva.subtitle} />
+      <PageHero title={t.ocenovanieDusevnehoVlastnictva.title} subtitle={t.ocenovanieDusevnehoVlastnictva.subtitle} backgroundImage={parallaxMarble} />
       <section className="page-section">
         <AnimatedSection>
           <h2 className="section-title">{t.ocenovanieDusevnehoVlastnictva.assetsTitle}</h2>

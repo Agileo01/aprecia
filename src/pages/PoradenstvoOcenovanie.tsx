@@ -4,6 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
+import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
 
 const StaggerItem = ({ children, index }: { children: React.ReactNode; index: number }) => {
   const { ref, isVisible } = useScrollAnimation(0.1);
@@ -29,7 +30,7 @@ const PoradenstvoOcenovanie = () => {
 
   return (
     <Layout>
-      <PageHero title={t.poradenstvoOcenovanie.title} subtitle={t.poradenstvoOcenovanie.subtitle} />
+      <PageHero title={t.poradenstvoOcenovanie.title} subtitle={t.poradenstvoOcenovanie.subtitle} backgroundImage={parallaxArchitecture} />
       <section className="page-section">
         <div className="grid md:grid-cols-3 gap-6">
           {t.poradenstvoOcenovanie.subpages.map((s, i) => (
