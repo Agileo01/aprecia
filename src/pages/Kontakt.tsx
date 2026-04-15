@@ -24,7 +24,7 @@ const Kontakt = () => (
             </div>
             <div className="flex gap-3">
               <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-              <span>E-mail bude doplnený</span>
+              <a href="mailto:aprecia@aprecia.sk" className="hover:text-primary transition-colors">aprecia@aprecia.sk</a>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ const Kontakt = () => (
             </div>
             <div className="flex gap-3">
               <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-              <span>E-mail bude doplnený</span>
+              <a href="mailto:aprecia@aprecia.sk" className="hover:text-primary transition-colors">aprecia@aprecia.sk</a>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ const Kontakt = () => (
         <h2 className="font-heading text-2xl font-semibold mb-3">Dohodnite si úvodnú konzultáciu</h2>
         <p className="text-background/70 mb-6">Kontaktujte nás a radi vám odpovieme na vaše otázky.</p>
         <Link
-          to="mailto:info@aprecia.sk"
+          to="mailto:aprecia@aprecia.sk"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 font-medium hover:opacity-90 transition-opacity"
         >
           Napíšte nám <ArrowRight className="w-4 h-4" />
