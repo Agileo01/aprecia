@@ -102,7 +102,7 @@ const Kontakt = () => {
               </div>
             </div>
             <div className="service-card">
-              <h2 className="font-heading text-xl font-semibold mb-4">Spoločný kontakt</h2>
+              <h2 className="font-heading text-xl font-semibold mb-4">Kontakt</h2>
               <div className="space-y-4 text-muted-foreground">
                 <div className="flex gap-3">
                   <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
