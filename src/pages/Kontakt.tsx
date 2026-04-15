@@ -43,33 +43,28 @@ const Kontakt = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact info */}
           <div className="space-y-8">
-            <div className="service-card">
-              <h2 className="font-heading text-2xl font-semibold mb-6">Slovenská republika</h2>
-              <div className="space-y-4 text-muted-foreground">
-                <div className="flex gap-3">
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="service-card">
+                <h2 className="font-heading text-2xl font-semibold mb-6">Slovenská republika</h2>
+                <div className="flex gap-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <span>Aprecia s. r. o.<br />Na Hrebienku 8079/2A<br />811 02 Bratislava - mestská časť Staré Mesto</span>
                 </div>
-                <div className="flex gap-3">
-                  <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <a href="tel:+421903991150" className="hover:text-primary transition-colors">+421 903 991 150</a>
-                </div>
-                <div className="flex gap-3">
-                  <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <a href="mailto:aprecia@aprecia.sk" className="hover:text-primary transition-colors">aprecia@aprecia.sk</a>
+              </div>
+              <div className="service-card">
+                <h2 className="font-heading text-2xl font-semibold mb-6">Česká republika</h2>
+                <div className="flex gap-3 text-muted-foreground">
+                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>Aprecia s.r.o.<br />Štěpánská 1742/27<br />110 00 Praha 1 - Nové Město</span>
                 </div>
               </div>
             </div>
             <div className="service-card">
-              <h2 className="font-heading text-2xl font-semibold mb-6">Česká republika</h2>
+              <h2 className="font-heading text-xl font-semibold mb-4">Spoločný kontakt</h2>
               <div className="space-y-4 text-muted-foreground">
                 <div className="flex gap-3">
-                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Aprecia s.r.o.<br />Štěpánská 1742/27<br />110 00 Praha 1 - Nové Město</span>
-                </div>
-                <div className="flex gap-3">
                   <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Telefón bude doplnený</span>
+                  <a href="tel:+421903991150" className="hover:text-primary transition-colors">+421 903 991 150</a>
                 </div>
                 <div className="flex gap-3">
                   <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
