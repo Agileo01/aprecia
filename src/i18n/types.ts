@@ -126,6 +126,8 @@ export interface Translations {
     requiredError: string;
     emailClientOpened: string;
     emailClientOpenedDesc: string;
+    qrTitle: string;
+    qrDownload: string;
   };
   legal: {
     ochrana: { title: string; sections: { heading: string; content: string }[] };

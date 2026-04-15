@@ -197,6 +197,8 @@ export const cs: Translations = {
     requiredError: 'Vyplňte povinná pole',
     emailClientOpened: 'E-mailový klient byl otevřen',
     emailClientOpenedDesc: 'Odešlete zprávu z vašeho e-mailového klienta.',
+    qrTitle: 'Uložte si náš kontakt',
+    qrDownload: 'Stáhnout QR kód',
   },
   legal: {
     ochrana: {
