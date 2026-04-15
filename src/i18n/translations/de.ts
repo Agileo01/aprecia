@@ -199,10 +199,41 @@ export const de: Translations = {
     emailClientOpenedDesc: 'Senden Sie die Nachricht aus Ihrem E-Mail-Client.',
   },
   legal: {
-    ochranaTitle: 'Datenschutz',
-    cookiesTitle: 'Cookies',
-    podmienkyTitle: 'Bedingungen',
-    placeholder: 'Der Inhalt dieser Seite wird ergänzt.',
+    ochrana: {
+      title: 'Datenschutzerklärung',
+      sections: [
+        { heading: '1. Verantwortlicher', content: 'Verantwortlicher für die Verarbeitung personenbezogener Daten ist die Gesellschaft Aprecia s. r. o., mit Sitz Na Hrebienku 8079/2A, 811 02 Bratislava, Slowakische Republik, ID-Nr.: 46 529 187 (nachfolgend „Verantwortlicher").\n\nBei Fragen zum Datenschutz kontaktieren Sie uns unter: aprecia@aprecia.sk.' },
+        { heading: '2. Welche personenbezogenen Daten verarbeiten wir', content: 'Wir verarbeiten personenbezogene Daten, die Sie uns im Zusammenhang mit der Nutzung unserer Dienstleistungen oder der Kommunikation mit uns bereitstellen:\n\n• Identifikationsdaten: Name, Vorname, Titel\n• Kontaktdaten: E-Mail-Adresse, Telefonnummer, Korrespondenzadresse\n• Kommunikationsdaten: Inhalt von E-Mails, Nachrichten aus dem Kontaktformular\n• Rechnungsdaten: Firmenname, ID-Nummer, Steuernummer, Sitz' },
+        { heading: '3. Zwecke und Rechtsgrundlagen der Verarbeitung', content: 'Wir verarbeiten personenbezogene Daten zu folgenden Zwecken:\n\n• Erbringung von Beratungs- und Sachverständigendienstleistungen – Rechtsgrundlage: Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO)\n• Kommunikation mit Klienten und Interessenten – Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO)\n• Erfüllung gesetzlicher Pflichten (Buchhaltung, Steuern) – Rechtsgrundlage: gesetzliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO)\n• Versand von Geschäftsmitteilungen – Rechtsgrundlage: Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)' },
+        { heading: '4. Speicherdauer', content: '• Vertragsbezogene Daten: während der Vertragslaufzeit und 5 Jahre nach Beendigung\n• Buchhaltungs- und Steuerunterlagen: 10 Jahre ab Ende des Geschäftsjahres\n• Daten auf Basis der Einwilligung: bis zum Widerruf\n• Daten aus dem Kontaktformular: 1 Jahr nach der letzten Kommunikation' },
+        { heading: '5. Empfänger personenbezogener Daten', content: 'Personenbezogene Daten können weitergegeben werden an:\n\n• IT-Dienstleister und Hosting-Anbieter\n• Steuerberater und Wirtschaftsprüfer\n• Behörden im gesetzlich vorgeschriebenen Umfang\n\nWir übermitteln keine personenbezogenen Daten in Drittländer außerhalb des Europäischen Wirtschaftsraums.' },
+        { heading: '6. Ihre Rechte', content: 'Sie haben folgende Rechte:\n\n• Recht auf Auskunft über Ihre personenbezogenen Daten\n• Recht auf Berichtigung unrichtiger Daten\n• Recht auf Löschung\n• Recht auf Einschränkung der Verarbeitung\n• Recht auf Datenübertragbarkeit\n• Widerspruchsrecht gegen die Verarbeitung\n• Recht auf Widerruf der Einwilligung\n• Beschwerderecht bei einer Aufsichtsbehörde\n\nIhre Rechte können Sie per E-Mail geltend machen: aprecia@aprecia.sk.' },
+        { heading: '7. Datensicherheit', content: 'Wir haben angemessene technische und organisatorische Maßnahmen zum Schutz personenbezogener Daten vor unbefugtem Zugriff, Änderung, Offenlegung oder Vernichtung getroffen.' },
+      ],
+    },
+    cookies: {
+      title: 'Cookies',
+      sections: [
+        { heading: '1. Was sind Cookies', content: 'Cookies sind kleine Textdateien, die beim Besuch einer Webseite auf Ihrem Gerät gespeichert werden. Sie dienen der Sicherstellung der ordnungsgemäßen Funktionsweise der Webseite, der Verbesserung des Nutzererlebnisses und der Analyse der Besucherzahlen.' },
+        { heading: '2. Welche Cookies verwenden wir', content: '• Notwendige (technische) Cookies – gewährleisten die Grundfunktionen der Webseite. Sie erfordern keine Einwilligung.\n\n• Analytische Cookies – helfen uns zu verstehen, wie Besucher unsere Webseite nutzen, durch anonyme Sammlung und Auswertung von Informationen.' },
+        { heading: '3. Cookie-Verwaltung', content: 'Sie können Cookies in den Einstellungen Ihres Webbrowsers verwalten:\n\n• Google Chrome: Einstellungen → Datenschutz und Sicherheit → Cookies\n• Mozilla Firefox: Einstellungen → Datenschutz und Sicherheit\n• Safari: Einstellungen → Datenschutz\n• Microsoft Edge: Einstellungen → Cookies und Websiteberechtigungen\n\nBitte beachten Sie, dass das Deaktivieren bestimmter Cookies die Funktionalität der Webseite beeinträchtigen kann.' },
+        { heading: '4. Speicherdauer von Cookies', content: '• Sitzungscookies – werden nach dem Schließen des Browsers automatisch gelöscht\n• Dauerhafte Cookies – werden für eine bestimmte Zeit gespeichert (in der Regel 1–12 Monate)' },
+        { heading: '5. Kontakt', content: 'Bei Fragen kontaktieren Sie uns unter: aprecia@aprecia.sk.' },
+      ],
+    },
+    podmienky: {
+      title: 'Nutzungsbedingungen',
+      sections: [
+        { heading: '1. Einleitende Bestimmungen', content: 'Diese Nutzungsbedingungen regeln die Regeln für den Zugang und die Nutzung der Webseite www.aprecia.sk, deren Betreiber die Gesellschaft Aprecia s. r. o., ID-Nr.: 46 529 187, ist.\n\nDurch den Zugriff auf die Webseite und deren Nutzung stimmen Sie diesen Bedingungen zu.' },
+        { heading: '2. Inhalt der Webseite', content: 'Der Inhalt der Webseite hat informativen Charakter und stellt keine rechtliche, finanzielle, steuerliche oder sonstige fachliche Beratung dar. Die Informationen können eine individuelle fachliche Beratung nicht ersetzen.' },
+        { heading: '3. Geistiges Eigentum', content: 'Alle Inhalte der Webseite sind urheberrechtlich geschützt. Jegliches Kopieren, Verbreiten oder sonstige Nutzung der Inhalte ohne vorherige schriftliche Genehmigung des Betreibers ist untersagt.' },
+        { heading: '4. Haftungsbeschränkung', content: 'Der Betreiber haftet nicht für Schäden, die im Zusammenhang mit der Nutzung der Webseite entstehen, für den Inhalt von Webseiten Dritter oder für die vorübergehende Nichtverfügbarkeit der Webseite.' },
+        { heading: '5. Links zu Dritten', content: 'Die Webseite kann Links zu Webseiten Dritter enthalten. Der Betreiber hat keine Kontrolle über deren Inhalt und übernimmt dafür keine Verantwortung.' },
+        { heading: '6. Änderungen der Bedingungen', content: 'Der Betreiber behält sich das Recht vor, diese Bedingungen jederzeit zu ändern. Die aktuelle Version ist stets auf der Webseite verfügbar.' },
+        { heading: '7. Anwendbares Recht', content: 'Diese Bedingungen unterliegen dem Recht der Slowakischen Republik.' },
+        { heading: '8. Kontakt', content: 'Aprecia s. r. o.\nNa Hrebienku 8079/2A\n811 02 Bratislava\nE-Mail: aprecia@aprecia.sk\nTelefon: +421 903 991 150' },
+      ],
+    },
   },
   footer: {
     description: 'Unabhängige Beratungsgesellschaft spezialisiert auf Finanzberatung, Transaktionsprozesse und Bewertung.',
