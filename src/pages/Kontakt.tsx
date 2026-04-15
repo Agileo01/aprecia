@@ -5,6 +5,7 @@ import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { ContactQR } from "@/components/ContactQR";
 import parallaxMarble from "@/assets/parallax-marble.jpg";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
@@ -102,7 +103,7 @@ const Kontakt = () => {
             <AnimatedSection>
               <div className="service-card">
                 <h2 className="font-heading text-xl font-semibold mb-4">{t.kontakt.contactTitle}</h2>
-                <div className="space-y-4 text-muted-foreground">
+                <div className="space-y-4 text-muted-foreground mb-6">
                   <div className="flex gap-3">
                     <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <a href="tel:+421903991150" className="hover:text-primary transition-colors">+421 903 991 150</a>
@@ -111,6 +112,10 @@ const Kontakt = () => {
                     <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <a href="mailto:aprecia@aprecia.sk" className="hover:text-primary transition-colors">aprecia@aprecia.sk</a>
                   </div>
+                </div>
+                <div className="pt-4 border-t border-border">
+                  <h3 className="font-heading text-sm font-semibold mb-3 text-center text-muted-foreground">{t.kontakt.qrTitle}</h3>
+                  <ContactQR downloadLabel={t.kontakt.qrDownload} />
                 </div>
               </div>
             </AnimatedSection>
