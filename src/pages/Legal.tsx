@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
 
 interface LegalProps {
   page: 'ochrana' | 'cookies' | 'podmienky';
@@ -22,7 +23,7 @@ const Legal = ({ page }: LegalProps) => {
 
   return (
     <Layout>
-      <PageHero title={data.title} />
+      <PageHero title={data.title} backgroundImage={parallaxArchitecture} />
       <section className="page-section">
         <div className="max-w-3xl space-y-10">
           {data.sections.map((section, i) => (
