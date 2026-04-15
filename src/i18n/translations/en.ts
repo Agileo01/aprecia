@@ -197,6 +197,8 @@ export const en: Translations = {
     requiredError: 'Please fill in the required fields',
     emailClientOpened: 'Email client was opened',
     emailClientOpenedDesc: 'Send the message from your email client.',
+    qrTitle: 'Save our contact',
+    qrDownload: 'Download QR code',
   },
   legal: {
     ochrana: {
