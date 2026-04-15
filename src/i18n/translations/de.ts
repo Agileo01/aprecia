@@ -9,7 +9,7 @@ export const de: Translations = {
     znaleckaCinnost: 'Sachverständigentätigkeit',
     tim: 'Team',
     referencie: 'Referenzen',
-    odborneClanky: 'Fachartikel',
+    odborneClanky: 'Blog',
     kontakt: 'Kontakt',
   },
   index: {
@@ -169,7 +169,7 @@ export const de: Translations = {
     ],
   },
   odborneClanky: {
-    title: 'Fachartikel',
+    title: 'Blog',
     subtitle: 'Wir veröffentlichen Fachartikel und Analysen aus den Bereichen Finanzberatung, Bewertung und Transaktionen. Unser Ziel ist es, Erkenntnisse aus der Praxis zu teilen und zum fachlichen Diskurs beizutragen.',
     newsletterTitle: 'Abonnieren Sie unsere Neuigkeiten',
     newsletterSubtitle: 'Melden Sie sich an und erhalten Sie neue Fachartikel und Aktualitäten direkt in Ihr E-Mail-Postfach.',
@@ -248,7 +248,7 @@ export const de: Translations = {
     znaleckaCinnost: 'Sachverständigentätigkeit',
     tim: 'Team',
     referencie: 'Referenzen',
-    odborneClanky: 'Fachartikel',
+    odborneClanky: 'Blog',
     kontakt: 'Kontakt',
     ochrana: 'Datenschutz',
     cookies: 'Cookies',

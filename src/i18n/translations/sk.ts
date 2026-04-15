@@ -9,7 +9,7 @@ export const sk: Translations = {
     znaleckaCinnost: 'Znalecká činnosť',
     tim: 'Tím',
     referencie: 'Referencie',
-    odborneClanky: 'Odborné články',
+    odborneClanky: 'Blog',
     kontakt: 'Kontakt',
   },
   index: {
@@ -169,7 +169,7 @@ export const sk: Translations = {
     ],
   },
   odborneClanky: {
-    title: 'Odborné články',
+    title: 'Blog',
     subtitle: 'Prinášame odborné články a analýzy z oblasti finančného poradenstva, oceňovania a transakcií. Naším cieľom je zdieľať poznatky z praxe a prispievať k odbornému diskurzu.',
     newsletterTitle: 'Odoberajte naše novinky',
     newsletterSubtitle: 'Prihláste sa na odber a dostávajte nové odborné články a aktuality priamo do vášho e-mailu.',
@@ -248,7 +248,7 @@ export const sk: Translations = {
     znaleckaCinnost: 'Znalecká činnosť',
     tim: 'Tím',
     referencie: 'Referencie',
-    odborneClanky: 'Odborné články',
+    odborneClanky: 'Blog',
     kontakt: 'Kontakt',
     ochrana: 'Ochrana osobných údajov',
     cookies: 'Cookies',
