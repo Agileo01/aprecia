@@ -4,11 +4,13 @@ import { Download } from "lucide-react";
 
 const VCARD = `BEGIN:VCARD
 VERSION:3.0
+N:;;;;
 FN:Aprecia s.r.o.
 ORG:Aprecia s.r.o.
 TEL;TYPE=WORK,VOICE:+421903991150
 EMAIL;TYPE=WORK:aprecia@aprecia.sk
 ADR;TYPE=WORK:;;Na Hrebienku 8079/2A;Bratislava;;811 02;Slovakia
+ADR;TYPE=WORK:;;Štěpánská 1742/27;Praha 1 - Nové Město;;110 00;Czech Republic
 URL:https://www.aprecia.sk
 END:VCARD`;
 
