@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { routeSlugs, languages } from "@/i18n/config";
 import Index from "./pages/Index";
 import FinancnePoradenstvo from "./pages/FinancnePoradenstvo";
@@ -59,6 +60,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <LanguageProvider>
+          <ScrollToTop />
           <Routes>
             {allRoutes.map((r) => (
               <Route key={r.path} path={r.path} element={r.element} />
