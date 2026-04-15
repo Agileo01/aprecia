@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const situations = [
   "Predaj podniku alebo jeho časti",
@@ -18,6 +19,15 @@ const services = [
   "Spolupráca s právnymi a daňovými poradcami",
 ];
 
+const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
+  const { ref, isVisible } = useScrollAnimation(0.12);
+  return (
+    <div ref={ref} className={`transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} ${className}`}>
+      {children}
+    </div>
+  );
+};
+
 const TransakcnePoradenstvo = () => (
   <Layout>
     <PageHero
@@ -26,7 +36,7 @@ const TransakcnePoradenstvo = () => (
     />
     <section className="page-section">
       <div className="grid md:grid-cols-2 gap-16">
-        <div>
+        <AnimatedSection>
           <h2 className="section-title">Typické situácie</h2>
           <ul className="space-y-3">
             {situations.map((s) => (
@@ -36,8 +46,8 @@ const TransakcnePoradenstvo = () => (
               </li>
             ))}
           </ul>
-        </div>
-        <div>
+        </AnimatedSection>
+        <AnimatedSection>
           <h2 className="section-title">Rozsah služieb</h2>
           <ul className="space-y-3">
             {services.map((s) => (
@@ -47,7 +57,7 @@ const TransakcnePoradenstvo = () => (
               </li>
             ))}
           </ul>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   </Layout>

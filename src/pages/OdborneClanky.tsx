@@ -3,6 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Mail } from "lucide-react";
 import { useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const articles = [
   {
@@ -57,6 +58,28 @@ const articles = [
   },
 ];
 
+const StaggerItem = ({ children, index }: { children: React.ReactNode; index: number }) => {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-600 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+      style={{ transitionDelay: isVisible ? `${index * 80}ms` : "0ms" }}
+    >
+      {children}
+    </div>
+  );
+};
+
+const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
+  const { ref, isVisible } = useScrollAnimation(0.12);
+  return (
+    <div ref={ref} className={`transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} ${className}`}>
+      {children}
+    </div>
+  );
+};
+
 const OdborneClanky = () => (
   <Layout>
     <PageHero
@@ -66,44 +89,47 @@ const OdborneClanky = () => (
     <section className="page-section">
       <div className="max-w-4xl mx-auto grid gap-6">
         {articles.map((article, i) => (
-          <a
-            key={i}
-            href={article.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block group"
-          >
-            <Card className="transition-shadow hover:shadow-md">
-              <CardContent className="p-6 flex items-start gap-4">
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {article.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    {article.description}
-                  </p>
-                </div>
-                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1" />
-              </CardContent>
-            </Card>
-          </a>
+          <StaggerItem key={i} index={i}>
+            <a
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group"
+            >
+              <Card className="transition-shadow hover:shadow-md">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      {article.description}
+                    </p>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1" />
+                </CardContent>
+              </Card>
+            </a>
+          </StaggerItem>
         ))}
       </div>
     </section>
 
     {/* Newsletter */}
-    <section className="bg-secondary py-16 md:py-24">
-      <div className="max-w-2xl mx-auto px-6 text-center">
-        <Mail className="w-10 h-10 text-primary mx-auto mb-4" />
-        <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground mb-3">
-          Odoberajte naše novinky
-        </h2>
-        <p className="text-muted-foreground mb-8">
-          Prihláste sa na odber a dostávajte nové odborné články a aktuality priamo do vášho e-mailu.
-        </p>
-        <NewsletterForm />
-      </div>
-    </section>
+    <AnimatedSection>
+      <section className="bg-secondary py-16 md:py-24">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <Mail className="w-10 h-10 text-primary mx-auto mb-4" />
+          <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground mb-3">
+            Odoberajte naše novinky
+          </h2>
+          <p className="text-muted-foreground mb-8">
+            Prihláste sa na odber a dostávajte nové odborné články a aktuality priamo do vášho e-mailu.
+          </p>
+          <NewsletterForm />
+        </div>
+      </section>
+    </AnimatedSection>
   </Layout>
 );
 
