@@ -1,7 +1,8 @@
 import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Mail } from "lucide-react";
+import { useState } from "react";
 
 const articles = [
   {
