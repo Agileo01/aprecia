@@ -128,10 +128,9 @@ export interface Translations {
     emailClientOpenedDesc: string;
   };
   legal: {
-    ochranaTitle: string;
-    cookiesTitle: string;
-    podmienkyTitle: string;
-    placeholder: string;
+    ochrana: { title: string; sections: { heading: string; content: string }[] };
+    cookies: { title: string; sections: { heading: string; content: string }[] };
+    podmienky: { title: string; sections: { heading: string; content: string }[] };
   };
   footer: {
     description: string;
