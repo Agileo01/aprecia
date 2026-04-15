@@ -3,6 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
 import parallaxMarble from "@/assets/parallax-marble.jpg";
+import antonHudzik from "@/assets/anton-hudzik.jpg";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
@@ -39,10 +40,14 @@ const Tim = () => {
               <div className="border-b border-border pb-16 last:border-0">
                 <div className="grid md:grid-cols-3 gap-8">
                   <div>
-                    <div className="w-full aspect-[3/4] bg-secondary flex items-center justify-center mb-4">
-                      <span className="text-4xl font-heading text-muted-foreground/30">
-                        {member.name.split(" ").pop()?.[0]}
-                      </span>
+                    <div className="w-full aspect-[3/4] bg-secondary flex items-center justify-center mb-4 overflow-hidden">
+                      {member.name.includes("Hudzík") ? (
+                        <img src={antonHudzik} alt={member.name} className="w-full h-full object-cover" />
+                      ) : (
+                        <span className="text-4xl font-heading text-muted-foreground/30">
+                          {member.name.split(" ").pop()?.[0]}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div className="md:col-span-2">
