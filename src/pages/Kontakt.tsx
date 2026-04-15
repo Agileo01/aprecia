@@ -55,8 +55,8 @@ const Kontakt = () => {
             <div className="space-y-6">
               <AnimatedSection>
                 <div className="service-card">
-                  <div className="flex flex-col md:flex-row md:items-stretch gap-6">
-                    <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:items-stretch gap-6 min-w-0">
+                    <div className="flex-1 min-w-0">
                       <h2 className="font-heading text-2xl font-semibold mb-4">Slovenská republika</h2>
                       <div className="flex gap-3 text-muted-foreground mb-3">
                         <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -75,7 +75,7 @@ const Kontakt = () => {
                         Otvoriť v Google Maps →
                       </a>
                     </div>
-                    <div className="md:w-72 flex-shrink-0">
+                    <div className="md:w-56 flex-shrink-0">
                       <iframe
                         title="Mapa - Bratislava"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.8!2d17.0975!3d48.1525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA5JzA5LjAiTiAxN8KwMDUnNTEuMCJF!5e0!3m2!1ssk!2ssk!4v1"
@@ -89,8 +89,8 @@ const Kontakt = () => {
               </AnimatedSection>
               <AnimatedSection>
                 <div className="service-card">
-                  <div className="flex flex-col md:flex-row md:items-stretch gap-6">
-                    <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:items-stretch gap-6 min-w-0">
+                    <div className="flex-1 min-w-0">
                       <h2 className="font-heading text-2xl font-semibold mb-4">Česká republika</h2>
                       <div className="flex gap-3 text-muted-foreground mb-3">
                         <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -109,7 +109,7 @@ const Kontakt = () => {
                         Otvoriť v Google Maps →
                       </a>
                     </div>
-                    <div className="md:w-72 flex-shrink-0">
+                    <div className="md:w-56 flex-shrink-0">
                       <iframe
                         title="Mapa - Praha"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.3!2d14.4237!3d50.0785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDA0JzQyLjYiTiAxNMKwMjUnMjUuMyJF!5e0!3m2!1ssk!2ssk!4v1"
