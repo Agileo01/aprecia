@@ -52,7 +52,7 @@ const Kontakt = () => {
                 </div>
                 <div className="flex gap-3">
                   <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Telefón bude doplnený</span>
+                  <a href="tel:+421903991150" className="hover:text-primary transition-colors">+421 903 991 150</a>
                 </div>
                 <div className="flex gap-3">
                   <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
