@@ -65,7 +65,7 @@ const Kontakt = () => {
               <div className="space-y-4 text-muted-foreground">
                 <div className="flex gap-3">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Adresa bude doplnená</span>
+                  <span>Aprecia s.r.o.<br />Štěpánská 1742/27<br />110 00 Praha 1 - Nové Město</span>
                 </div>
                 <div className="flex gap-3">
                   <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
