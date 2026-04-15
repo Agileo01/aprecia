@@ -90,7 +90,53 @@ const OdborneClanky = () => (
         ))}
       </div>
     </section>
+
+    {/* Newsletter */}
+    <section className="bg-secondary py-16 md:py-24">
+      <div className="max-w-2xl mx-auto px-6 text-center">
+        <Mail className="w-10 h-10 text-primary mx-auto mb-4" />
+        <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground mb-3">
+          Odoberajte naše novinky
+        </h2>
+        <p className="text-muted-foreground mb-8">
+          Prihláste sa na odber a dostávajte nové odborné články a aktuality priamo do vášho e-mailu.
+        </p>
+        <NewsletterForm />
+      </div>
+    </section>
   </Layout>
 );
+
+const NewsletterForm = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    const subject = encodeURIComponent("Prihlásenie na odber noviniek");
+    const body = encodeURIComponent(`Dobrý deň,\n\nrád/rada by som sa prihlásil/a na odber noviniek.\n\nMôj e-mail: ${email}\n\nĎakujem.`);
+    window.location.href = `mailto:info@aprecia.sk?subject=${subject}&body=${body}`;
+    setEmail("");
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <input
+        type="email"
+        required
+        placeholder="Váš e-mail"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="flex-1 h-11 px-4 border border-input bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+      />
+      <button
+        type="submit"
+        className="h-11 px-6 bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+      >
+        Prihlásiť sa
+      </button>
+    </form>
+  );
+};
 
 export default OdborneClanky;
