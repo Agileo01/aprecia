@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
+import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
@@ -30,7 +31,7 @@ const Referencie = () => {
 
   return (
     <Layout>
-      <PageHero title={t.referencie.title} subtitle={t.referencie.subtitle} />
+      <PageHero title={t.referencie.title} subtitle={t.referencie.subtitle} backgroundImage={parallaxArchitecture} />
       <section className="page-section">
         <AnimatedSection>
           <p className="text-muted-foreground max-w-3xl mb-12">{t.referencie.disclaimer}</p>

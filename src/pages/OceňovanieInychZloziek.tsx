@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
+import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
 
 const AnimatedSection = ({ children }: { children: React.ReactNode }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
@@ -17,7 +18,7 @@ const OceňovanieInychZloziek = () => {
 
   return (
     <Layout>
-      <PageHero title={t.ocenovanieInychZloziek.title} subtitle={t.ocenovanieInychZloziek.subtitle} />
+      <PageHero title={t.ocenovanieInychZloziek.title} subtitle={t.ocenovanieInychZloziek.subtitle} backgroundImage={parallaxArchitecture} />
       <section className="page-section">
         <AnimatedSection>
           <h2 className="section-title">{t.ocenovanieInychZloziek.assetsTitle}</h2>

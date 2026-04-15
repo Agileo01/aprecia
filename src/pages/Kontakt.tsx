@@ -5,6 +5,7 @@ import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
+import parallaxMarble from "@/assets/parallax-marble.jpg";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
@@ -46,7 +47,7 @@ const Kontakt = () => {
 
   return (
     <Layout>
-      <PageHero title={t.kontakt.title} subtitle={t.kontakt.subtitle} />
+      <PageHero title={t.kontakt.title} subtitle={t.kontakt.subtitle} backgroundImage={parallaxMarble} />
       <section className="page-section">
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
