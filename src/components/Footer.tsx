@@ -1,54 +1,58 @@
 import { Link } from "react-router-dom";
-
 import logo from "@/assets/aprecia-logo.gif";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-export const Footer = () => (
-  <footer className="border-t border-border bg-secondary">
-    <div className="max-w-6xl mx-auto px-6 py-16">
-      <div className="grid md:grid-cols-4 gap-10">
-        <div>
-          <img src={logo} alt="Aprecia" className="h-8 mb-4" />
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Nezávislá poradenská spoločnosť zameraná na finančné poradenstvo, transakčné procesy a oceňovanie.
-          </p>
+export const Footer = () => {
+  const { t, route } = useLanguage();
+
+  return (
+    <footer className="border-t border-border bg-secondary">
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-4 gap-10">
+          <div>
+            <img src={logo} alt="Aprecia" className="h-8 mb-4" />
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {t.footer.description}
+            </p>
+          </div>
+          <div>
+            <h4 className="font-heading font-semibold text-foreground mb-4">{t.footer.servicesTitle}</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link to={route('transakcnePoradenstvo')} className="hover:text-primary transition-colors">{t.footer.transakcnePoradenstvo}</Link></li>
+              <li><Link to={route('poradenstvoOcenovanie')} className="hover:text-primary transition-colors">{t.footer.poradenstvoOcenovanie}</Link></li>
+              <li><Link to={route('znaleckaCinnost')} className="hover:text-primary transition-colors">{t.footer.znaleckaCinnost}</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-heading font-semibold text-foreground mb-4">{t.footer.companyTitle}</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link to={route('tim')} className="hover:text-primary transition-colors">{t.footer.tim}</Link></li>
+              <li><Link to={route('referencie')} className="hover:text-primary transition-colors">{t.footer.referencie}</Link></li>
+              <li><Link to={route('odborneClanky')} className="hover:text-primary transition-colors">{t.footer.odborneClanky}</Link></li>
+              <li><Link to={route('kontakt')} className="hover:text-primary transition-colors">{t.footer.kontakt}</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-heading font-semibold text-foreground mb-4">{t.footer.legalTitle}</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link to={route('ochranaOsobnychUdajov')} className="hover:text-primary transition-colors">{t.footer.ochrana}</Link></li>
+              <li><Link to={route('cookies')} className="hover:text-primary transition-colors">{t.footer.cookies}</Link></li>
+              <li><Link to={route('podmienky')} className="hover:text-primary transition-colors">{t.footer.podmienky}</Link></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h4 className="font-heading font-semibold text-foreground mb-4">Služby</h4>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/financne-poradenstvo/transakcne-poradenstvo" className="hover:text-primary transition-colors">Transakčné poradenstvo</Link></li>
-            <li><Link to="/financne-poradenstvo/poradenstvo-pri-ocenovani" className="hover:text-primary transition-colors">Poradenstvo pri oceňovaní</Link></li>
-            <li><Link to="/znalecka-cinnost" className="hover:text-primary transition-colors">Znalecká činnosť</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-heading font-semibold text-foreground mb-4">Spoločnosť</h4>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/tim" className="hover:text-primary transition-colors">Tím</Link></li>
-            <li><Link to="/referencie" className="hover:text-primary transition-colors">Referencie</Link></li>
-            <li><Link to="/odborne-clanky" className="hover:text-primary transition-colors">Odborné články</Link></li>
-            <li><Link to="/kontakt" className="hover:text-primary transition-colors">Kontakt</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-heading font-semibold text-foreground mb-4">Právne informácie</h4>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/ochrana-osobnych-udajov" className="hover:text-primary transition-colors">Ochrana osobných údajov</Link></li>
-            <li><Link to="/cookies" className="hover:text-primary transition-colors">Cookies</Link></li>
-            <li><Link to="/podmienky" className="hover:text-primary transition-colors">Podmienky</Link></li>
-          </ul>
+        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+          <span>© {new Date().getFullYear()} Aprecia s.r.o. {t.footer.copyright}</span>
+          <div className="flex items-center gap-4">
+            <a href="https://www.linkedin.com/company/aprecia-s-r-o-/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="LinkedIn">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100068318657666" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <span>© {new Date().getFullYear()} Aprecia s.r.o. Všetky práva vyhradené.</span>
-        <div className="flex items-center gap-4">
-          <a href="https://www.linkedin.com/company/aprecia-s-r-o-/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="LinkedIn">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=100068318657666" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
