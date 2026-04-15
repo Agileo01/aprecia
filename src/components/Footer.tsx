@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Facebook } from "lucide-react";
+import { LinkedinIcon, FacebookIcon } from "lucide-react";
 import logo from "@/assets/aprecia-logo.gif";
 
 export const Footer = () => (
