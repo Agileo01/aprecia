@@ -9,7 +9,7 @@ export const de: Translations = {
     znaleckaCinnost: 'Sachverständigentätigkeit',
     tim: 'Team',
     referencie: 'Referenzen',
-    odborneClanky: 'Fachartikel',
+    odborneClanky: 'Blog',
     kontakt: 'Kontakt',
   },
   index: {
