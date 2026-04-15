@@ -43,54 +43,62 @@ const Kontakt = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact info */}
           <div className="space-y-8">
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="space-y-6">
               <div className="service-card">
-                <h2 className="font-heading text-2xl font-semibold mb-6">Slovenská republika</h2>
-                <div className="flex gap-3 text-muted-foreground mb-4">
-                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Aprecia s. r. o.<br />Na Hrebienku 8079/2A<br />811 02 Bratislava - mestská časť Staré Mesto</span>
+                <div className="flex flex-col md:flex-row md:items-stretch gap-6">
+                  <div className="flex-1">
+                    <h2 className="font-heading text-2xl font-semibold mb-4">Slovenská republika</h2>
+                    <div className="flex gap-3 text-muted-foreground mb-3">
+                      <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Aprecia s. r. o.<br />Na Hrebienku 8079/2A<br />811 02 Bratislava - mestská časť Staré Mesto</span>
+                    </div>
+                    <a
+                      href="https://maps.google.com/?q=Na+Hrebienku+8079/2A,+811+02+Bratislava"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-sm text-primary hover:underline"
+                    >
+                      Otvoriť v Google Maps →
+                    </a>
+                  </div>
+                  <div className="md:w-72 flex-shrink-0">
+                    <iframe
+                      title="Mapa - Bratislava"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.8!2d17.0975!3d48.1525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA5JzA5LjAiTiAxN8KwMDUnNTEuMCJF!5e0!3m2!1ssk!2ssk!4v1"
+                      className="w-full h-48 border border-border"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
                 </div>
-                <a href="https://maps.google.com/?q=Na+Hrebienku+8079/2A,+811+02+Bratislava" target="_blank" rel="noopener noreferrer" className="block">
-                  <iframe
-                    title="Mapa - Bratislava"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.8!2d17.0975!3d48.1525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA5JzA5LjAiTiAxN8KwMDUnNTEuMCJF!5e0!3m2!1ssk!2ssk!4v1"
-                    className="w-full h-48 border border-border pointer-events-none"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </a>
-                <a
-                  href="https://maps.google.com/?q=Na+Hrebienku+8079/2A,+811+02+Bratislava"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-2 text-sm text-primary hover:underline"
-                >
-                  Otvoriť v Google Maps →
-                </a>
               </div>
               <div className="service-card">
-                <h2 className="font-heading text-2xl font-semibold mb-6">Česká republika</h2>
-                <div className="flex gap-3 text-muted-foreground mb-4">
-                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Aprecia s.r.o.<br />Štěpánská 1742/27<br />110 00 Praha 1 - Nové Město</span>
+                <div className="flex flex-col md:flex-row md:items-stretch gap-6">
+                  <div className="flex-1">
+                    <h2 className="font-heading text-2xl font-semibold mb-4">Česká republika</h2>
+                    <div className="flex gap-3 text-muted-foreground mb-3">
+                      <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span>Aprecia s.r.o.<br />Štěpánská 1742/27<br />110 00 Praha 1 - Nové Město</span>
+                    </div>
+                    <a
+                      href="https://maps.google.com/?q=Štěpánská+1742/27,+110+00+Praha+1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-sm text-primary hover:underline"
+                    >
+                      Otvoriť v Google Maps →
+                    </a>
+                  </div>
+                  <div className="md:w-72 flex-shrink-0">
+                    <iframe
+                      title="Mapa - Praha"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.3!2d14.4237!3d50.0785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDA0JzQyLjYiTiAxNMKwMjUnMjUuMyJF!5e0!3m2!1ssk!2ssk!4v1"
+                      className="w-full h-48 border border-border"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
                 </div>
-                <a href="https://maps.google.com/?q=Štěpánská+1742/27,+110+00+Praha+1" target="_blank" rel="noopener noreferrer" className="block">
-                  <iframe
-                    title="Mapa - Praha"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.3!2d14.4237!3d50.0785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDA0JzQyLjYiTiAxNMKwMjUnMjUuMyJF!5e0!3m2!1ssk!2ssk!4v1"
-                    className="w-full h-48 border border-border pointer-events-none"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </a>
-                <a
-                  href="https://maps.google.com/?q=Štěpánská+1742/27,+110+00+Praha+1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-2 text-sm text-primary hover:underline"
-                >
-                  Otvoriť v Google Maps →
-                </a>
               </div>
             </div>
             <div className="service-card">
