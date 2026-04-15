@@ -48,7 +48,7 @@ const Kontakt = () => {
               <div className="space-y-4 text-muted-foreground">
                 <div className="flex gap-3">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Adresa bude doplnená</span>
+                  <span>Aprecia s. r. o.<br />Na Hrebienku 8079/2A<br />811 02 Bratislava - mestská časť Staré Mesto</span>
                 </div>
                 <div className="flex gap-3">
                   <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
