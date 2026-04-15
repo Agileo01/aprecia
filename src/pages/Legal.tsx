@@ -1,23 +1,28 @@
 import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-const LegalPage = ({ title, content }: { title: string; content: string }) => (
-  <Layout>
-    <PageHero title={title} />
-    <section className="page-section">
-      <p className="text-muted-foreground leading-relaxed max-w-3xl">{content}</p>
-    </section>
-  </Layout>
-);
+interface LegalProps {
+  page: 'ochrana' | 'cookies' | 'podmienky';
+}
 
-export const OchranaOsobnychUdajov = () => (
-  <LegalPage title="Ochrana osobných údajov" content="Obsah tejto stránky bude doplnený." />
-);
+const Legal = ({ page }: LegalProps) => {
+  const { t } = useLanguage();
 
-export const Cookies = () => (
-  <LegalPage title="Cookies" content="Obsah tejto stránky bude doplnený." />
-);
+  const titles = {
+    ochrana: t.legal.ochranaTitle,
+    cookies: t.legal.cookiesTitle,
+    podmienky: t.legal.podmienkyTitle,
+  };
 
-export const Podmienky = () => (
-  <LegalPage title="Podmienky" content="Obsah tejto stránky bude doplnený." />
-);
+  return (
+    <Layout>
+      <PageHero title={titles[page]} />
+      <section className="page-section">
+        <p className="text-muted-foreground leading-relaxed max-w-3xl">{t.legal.placeholder}</p>
+      </section>
+    </Layout>
+  );
+};
+
+export default Legal;

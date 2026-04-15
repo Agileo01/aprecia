@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { LanguageProvider } from "@/i18n/LanguageContext";
+import { routeSlugs, languages } from "@/i18n/config";
 import Index from "./pages/Index";
 import FinancnePoradenstvo from "./pages/FinancnePoradenstvo";
 import TransakcnePoradenstvo from "./pages/TransakcnePoradenstvo";
@@ -15,10 +17,40 @@ import Tim from "./pages/Tim";
 import Referencie from "./pages/Referencie";
 import OdborneClanky from "./pages/OdborneClanky";
 import Kontakt from "./pages/Kontakt";
-import { OchranaOsobnychUdajov, Cookies, Podmienky } from "./pages/Legal";
+import Legal from "./pages/Legal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+
+// Generate routes for all languages
+const generateRoutes = () => {
+  const routes: { path: string; element: React.ReactNode }[] = [];
+  
+  for (const lang of languages) {
+    const s = routeSlugs[lang];
+    routes.push(
+      { path: s.home, element: <Index /> },
+      { path: s.financnePoradenstvo, element: <FinancnePoradenstvo /> },
+      { path: s.transakcnePoradenstvo, element: <TransakcnePoradenstvo /> },
+      { path: s.poradenstvoOcenovanie, element: <PoradenstvoOcenovanie /> },
+      { path: s.ocenovaniePodnikov, element: <OcenovaniePodnikov /> },
+      { path: s.ocenovanieDusevnehoVlastnictva, element: <OceňovanieDusevnehoVlastnictva /> },
+      { path: s.ocenovanieInychZloziek, element: <OceňovanieInychZloziek /> },
+      { path: s.znaleckaCinnost, element: <ZnaleckaCinnost /> },
+      { path: s.tim, element: <Tim /> },
+      { path: s.referencie, element: <Referencie /> },
+      { path: s.odborneClanky, element: <OdborneClanky /> },
+      { path: s.kontakt, element: <Kontakt /> },
+      { path: s.ochranaOsobnychUdajov, element: <Legal page="ochrana" /> },
+      { path: s.cookies, element: <Legal page="cookies" /> },
+      { path: s.podmienky, element: <Legal page="podmienky" /> },
+    );
+  }
+  
+  return routes;
+};
+
+const allRoutes = generateRoutes();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -26,24 +58,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/financne-poradenstvo" element={<FinancnePoradenstvo />} />
-          <Route path="/financne-poradenstvo/transakcne-poradenstvo" element={<TransakcnePoradenstvo />} />
-          <Route path="/financne-poradenstvo/poradenstvo-pri-ocenovani" element={<PoradenstvoOcenovanie />} />
-          <Route path="/financne-poradenstvo/poradenstvo-pri-ocenovani/ocenovanie-podnikov" element={<OcenovaniePodnikov />} />
-          <Route path="/financne-poradenstvo/poradenstvo-pri-ocenovani/ocenovanie-dusevneho-vlastnictva" element={<OceňovanieDusevnehoVlastnictva />} />
-          <Route path="/financne-poradenstvo/poradenstvo-pri-ocenovani/ocenovanie-inych-zloziek-majetku" element={<OceňovanieInychZloziek />} />
-          <Route path="/znalecka-cinnost" element={<ZnaleckaCinnost />} />
-          <Route path="/tim" element={<Tim />} />
-          <Route path="/referencie" element={<Referencie />} />
-          <Route path="/odborne-clanky" element={<OdborneClanky />} />
-          <Route path="/kontakt" element={<Kontakt />} />
-          <Route path="/ochrana-osobnych-udajov" element={<OchranaOsobnychUdajov />} />
-          <Route path="/cookies" element={<Cookies />} />
-          <Route path="/podmienky" element={<Podmienky />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <LanguageProvider>
+          <Routes>
+            {allRoutes.map((r) => (
+              <Route key={r.path} path={r.path} element={r.element} />
+            ))}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </LanguageProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
