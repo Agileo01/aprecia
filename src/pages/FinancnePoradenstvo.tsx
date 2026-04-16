@@ -4,7 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
-import parallaxCity from "@/assets/parallax-city.jpg";
+import parallaxHero from "@/assets/parallax-hero.jpg";
 
 const StaggerItem = ({ children, index }: { children: React.ReactNode; index: number }) => {
   const { ref, isVisible } = useScrollAnimation(0.1);
@@ -27,7 +27,7 @@ const FinancnePoradenstvo = () => {
 
   return (
     <Layout>
-      <PageHero title={t.financnePoradenstvo.title} subtitle={t.financnePoradenstvo.subtitle} backgroundImage={parallaxCity} />
+      <PageHero title={t.financnePoradenstvo.title} subtitle={t.financnePoradenstvo.subtitle} backgroundImage={parallaxHero} />
       <section className="page-section">
         <div
           ref={titleRef}
