@@ -5,7 +5,7 @@ import { ExternalLink, Mail } from "lucide-react";
 import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
-import parallaxCity from "@/assets/parallax-city.jpg";
+import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
 
 const articles = [
   {

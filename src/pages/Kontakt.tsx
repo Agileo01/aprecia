@@ -6,7 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { ContactQR } from "@/components/ContactQR";
-import parallaxMarble from "@/assets/parallax-marble.jpg";
+import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
