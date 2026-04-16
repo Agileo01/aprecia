@@ -5,6 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
 import antonHudzik from "@/assets/anton-hudzik.jpg";
 import andrejLang from "@/assets/andrej-lang.jpg";
+import michalVican from "@/assets/michal-vican.jpg";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
@@ -46,6 +47,8 @@ const Tim = () => {
                         <img src={antonHudzik} alt={member.name} className="w-full h-full object-cover" />
                       ) : member.name.includes("Lang") ? (
                         <img src={andrejLang} alt={member.name} className="w-full h-full object-cover" />
+                      ) : member.name.includes("Vičan") ? (
+                        <img src={michalVican} alt={member.name} className="w-full h-full object-cover" />
                       ) : (
                         <span className="text-4xl font-heading text-muted-foreground/30">
                           {member.name.split(" ").pop()?.[0]}
