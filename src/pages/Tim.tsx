@@ -4,6 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
 import parallaxMarble from "@/assets/parallax-marble.jpg";
 import antonHudzik from "@/assets/anton-hudzik.jpg";
+import andrejLang from "@/assets/andrej-lang.jpg";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
@@ -43,6 +44,8 @@ const Tim = () => {
                     <div className="w-full aspect-[3/4] bg-secondary flex items-center justify-center mb-4 overflow-hidden">
                       {member.name.includes("Hudzík") ? (
                         <img src={antonHudzik} alt={member.name} className="w-full h-full object-cover" />
+                      ) : member.name.includes("Lang") ? (
+                        <img src={andrejLang} alt={member.name} className="w-full h-full object-cover" />
                       ) : (
                         <span className="text-4xl font-heading text-muted-foreground/30">
                           {member.name.split(" ").pop()?.[0]}
