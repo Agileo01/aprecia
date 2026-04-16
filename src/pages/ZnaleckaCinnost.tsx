@@ -31,7 +31,7 @@ const ZnaleckaCinnost = () => {
 
   return (
     <Layout>
-      <PageHero title={t.znaleckaCinnost.title} subtitle={t.znaleckaCinnost.subtitle} backgroundImage={parallaxCity} />
+      <PageHero title={t.znaleckaCinnost.title} subtitle={t.znaleckaCinnost.subtitle} backgroundImage={parallaxArchitecture} />
       <section className="page-section">
         <div className="grid md:grid-cols-2 gap-16">
           <AnimatedSection>

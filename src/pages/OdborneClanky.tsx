@@ -87,7 +87,7 @@ const OdborneClanky = () => {
 
   return (
     <Layout>
-      <PageHero title={t.odborneClanky.title} subtitle={t.odborneClanky.subtitle} backgroundImage={parallaxCity} />
+      <PageHero title={t.odborneClanky.title} subtitle={t.odborneClanky.subtitle} backgroundImage={parallaxArchitecture} />
       <section className="page-section">
         <div className="max-w-4xl mx-auto grid gap-6">
           {articles.map((article, i) => (

@@ -48,7 +48,7 @@ const Kontakt = () => {
 
   return (
     <Layout>
-      <PageHero title={t.kontakt.title} subtitle={t.kontakt.subtitle} backgroundImage={parallaxMarble} />
+      <PageHero title={t.kontakt.title} subtitle={t.kontakt.subtitle} backgroundImage={parallaxArchitecture} />
       <section className="page-section">
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">

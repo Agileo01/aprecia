@@ -33,7 +33,7 @@ const Tim = () => {
 
   return (
     <Layout>
-      <PageHero title={t.tim.title} subtitle={t.tim.subtitle} backgroundImage={parallaxMarble} />
+      <PageHero title={t.tim.title} subtitle={t.tim.subtitle} backgroundImage={parallaxArchitecture} />
       <section className="page-section">
         <div className="space-y-16">
           {t.tim.team.map((member, i) => (
