@@ -4,6 +4,7 @@ import { ParallaxSection } from "@/components/ParallaxSection";
 import { ArrowRight, Shield, Scale, Globe, Lock } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
+import parallaxHero from "@/assets/parallax-hero.jpg";
 import parallaxCity from "@/assets/parallax-city.jpg";
 import parallaxMarble from "@/assets/parallax-marble.jpg";
 import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
