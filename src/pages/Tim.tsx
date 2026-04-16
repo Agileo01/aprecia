@@ -47,6 +47,8 @@ const Tim = () => {
                         <img src={antonHudzik} alt={member.name} className="w-full h-full object-cover" />
                       ) : member.name.includes("Lang") ? (
                         <img src={andrejLang} alt={member.name} className="w-full h-full object-cover" />
+                      ) : member.name.includes("Vičan") ? (
+                        <img src={michalVican} alt={member.name} className="w-full h-full object-cover" />
                       ) : (
                         <span className="text-4xl font-heading text-muted-foreground/30">
                           {member.name.split(" ").pop()?.[0]}
