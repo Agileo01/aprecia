@@ -4,6 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
 import parallaxMarble from "@/assets/parallax-marble.jpg";
 import antonHudzik from "@/assets/anton-hudzik.jpg";
+import andrejLang from "@/assets/andrej-lang.jpg";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
