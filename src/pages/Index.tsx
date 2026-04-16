@@ -66,7 +66,7 @@ const Index = () => {
     <Layout>
       {/* Hero with parallax */}
       <ParallaxSection
-        imageSrc={parallaxArchitecture}
+        imageSrc={parallaxCity}
         height="min-h-[600px] md:min-h-[700px]"
         overlay="bg-foreground/70"
       >
