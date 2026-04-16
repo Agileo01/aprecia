@@ -172,7 +172,7 @@ export const cs: Translations = {
     title: 'Blog',
     subtitle: 'Přinášíme odborné články a analýzy z oblasti finančního poradenství, oceňování a transakcí. Naším cílem je sdílet poznatky z praxe a přispívat k odbornému diskurzu.',
     newsletterTitle: 'Odebírejte naše novinky',
-    newsletterSubtitle: 'Přihlaste se k odběru a dostávejte nové odborné články a aktuality přímo do vašeho e-mailu.',
+    newsletterSubtitle: 'Přihlaste se k odběru a dostávejte nové odborné články a aktuality přímo do vašeho e\u2011mailu.',
     newsletterPlaceholder: 'Váš e-mail',
     newsletterButton: 'Přihlásit se',
   },
