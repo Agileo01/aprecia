@@ -258,4 +258,10 @@ export const de: Translations = {
     moreInfo: 'Mehr erfahren',
     more: 'Mehr',
   },
+  cookieConsent: {
+    text: 'Diese Website verwendet Cookies, um Ihr Browsing-Erlebnis zu verbessern.',
+    accept: 'Akzeptieren',
+    reject: 'Ablehnen',
+    moreInfo: 'Mehr über Cookies',
+  },
 };

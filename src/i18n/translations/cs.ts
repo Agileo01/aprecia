@@ -258,4 +258,10 @@ export const cs: Translations = {
     moreInfo: 'Více informací',
     more: 'Více',
   },
+  cookieConsent: {
+    text: 'Tato stránka používá cookies ke zlepšení vašeho zážitku z prohlížení.',
+    accept: 'Přijmout',
+    reject: 'Odmítnout',
+    moreInfo: 'Více o cookies',
+  },
 };

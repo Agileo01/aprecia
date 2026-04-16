@@ -258,4 +258,10 @@ export const en: Translations = {
     moreInfo: 'More information',
     more: 'More',
   },
+  cookieConsent: {
+    text: 'This website uses cookies to improve your browsing experience.',
+    accept: 'Accept',
+    reject: 'Reject',
+    moreInfo: 'More about cookies',
+  },
 };
