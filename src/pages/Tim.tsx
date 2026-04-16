@@ -2,7 +2,7 @@ import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
-import parallaxMarble from "@/assets/parallax-marble.jpg";
+import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
 import antonHudzik from "@/assets/anton-hudzik.jpg";
 import andrejLang from "@/assets/andrej-lang.jpg";
 
@@ -33,7 +33,7 @@ const Tim = () => {
 
   return (
     <Layout>
-      <PageHero title={t.tim.title} subtitle={t.tim.subtitle} backgroundImage={parallaxMarble} />
+      <PageHero title={t.tim.title} subtitle={t.tim.subtitle} backgroundImage={parallaxArchitecture} />
       <section className="page-section">
         <div className="space-y-16">
           {t.tim.team.map((member, i) => (

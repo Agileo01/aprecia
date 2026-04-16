@@ -6,7 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { ContactQR } from "@/components/ContactQR";
-import parallaxMarble from "@/assets/parallax-marble.jpg";
+import parallaxArchitecture from "@/assets/parallax-architecture.jpg";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const { ref, isVisible } = useScrollAnimation(0.12);
@@ -48,7 +48,7 @@ const Kontakt = () => {
 
   return (
     <Layout>
-      <PageHero title={t.kontakt.title} subtitle={t.kontakt.subtitle} backgroundImage={parallaxMarble} />
+      <PageHero title={t.kontakt.title} subtitle={t.kontakt.subtitle} backgroundImage={parallaxArchitecture} />
       <section className="page-section">
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
