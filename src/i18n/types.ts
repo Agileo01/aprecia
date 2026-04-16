@@ -155,6 +155,12 @@ export interface Translations {
     moreInfo: string;
     more: string;
   };
+  cookieConsent: {
+    text: string;
+    accept: string;
+    reject: string;
+    moreInfo: string;
+  };
 }
 
 export type TranslationsMap = Record<Language, Translations>;
