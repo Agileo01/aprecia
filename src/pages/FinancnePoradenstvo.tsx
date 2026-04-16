@@ -27,7 +27,7 @@ const FinancnePoradenstvo = () => {
 
   return (
     <Layout>
-      <PageHero title={t.financnePoradenstvo.title} subtitle={t.financnePoradenstvo.subtitle} backgroundImage={parallaxCity} />
+      <PageHero title={t.financnePoradenstvo.title} subtitle={t.financnePoradenstvo.subtitle} backgroundImage={parallaxHero} />
       <section className="page-section">
         <div
           ref={titleRef}
