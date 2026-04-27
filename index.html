@@ -7,6 +7,16 @@
     <meta name="description" content="Aprecia je nezávislá poradenská spoločnosť zameraná na finančné poradenstvo, transakčné procesy a oceňovanie v Slovenskej a Českej republike.">
     <meta name="author" content="Aprecia s.r.o." />
     <link rel="icon" href="/aprecia/favicon.png" type="image/png">
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      }(window.location));
+    </script>
     
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Aprecia – Finančné poradenstvo a oceňovanie">
@@ -14,7 +24,7 @@
   <meta property="og:description" content="Aprecia je nezávislá poradenská spoločnosť zameraná na finančné poradenstvo, transakčné procesy a oceňovanie v Slovenskej a Českej republike.">
   <meta name="twitter:description" content="Aprecia je nezávislá poradenská spoločnosť zameraná na finančné poradenstvo, transakčné procesy a oceňovanie v Slovenskej a Českej republike.">
   <meta name="twitter:card" content="summary">
-  <script type="module" crossorigin src="/aprecia/assets/index-BWkf1y5K.js"></script>
+  <script type="module" crossorigin src="/aprecia/assets/index-C76y2Ehd.js"></script>
   <link rel="stylesheet" crossorigin href="/aprecia/assets/index-CwM_HJDp.css">
 </head>
 
