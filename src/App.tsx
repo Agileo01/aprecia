@@ -58,7 +58,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/aprecia">
         <LanguageProvider>
           <ScrollToTop />
           <Routes>
